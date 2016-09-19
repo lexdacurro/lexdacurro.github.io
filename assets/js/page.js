@@ -23,63 +23,7 @@
 		return direction;
 	}
 	
-	
-	
-	function unloadGrids(){
-		if (randomizeTheEffects() == 1){
-			$(".clickable").text("Unloading Grids...");
-			setTimeout($(".clickable").empty(),1500);
-			setTimeout($("#Title a").animate({ "left": "-=35%" }, "slow" ),1800);
-			$(".first").hide("slide", { direction: "left"  }, 2000 );
-			$(".second").hide("slide", { direction: "down"  }, 2000 );
-			$(".third").hide("slide", { direction: "up"  }, 2000 );
-			$(".fourth").hide("slide", { direction: "right"  }, 2000, function(){
-				$(this).hide("slide",{direction:"top"},2000);
-				setTimeout(window.location.href="/portfolio/",2500);
-			});	
-		}else if (randomizeTheEffects() == 2){
-			$(".clickable").text("Unloading Grids...");
-			setTimeout($(".clickable").empty(),1500);
-			setTimeout($("#Title a").animate({ "left": "-=35%" }, "slow" ),1800);
-			$(".first").hide("slide", { direction: "right"  }, 2000 );
-			$(".second").hide("slide", { direction: "up"  }, 2000 );
-			$(".third").hide("slide", { direction: "down"  }, 2000 );
-			$(".fourth").hide("slide", { direction: "right"  }, 2000, function(){
-				$(this).hide("slide",{direction:"top"},2000);
-				setTimeout(window.location.href="/portfolio/",2500);
-			});	
-		}else{
-			$(".clickable").text("Unloading Grids...");
-			setTimeout($(".clickable").empty(),1500);
-			setTimeout($("#Title a").animate({ "left": "-=35%" }, "slow" ),1800);
-			$(".first").hide("slide", { direction: "left"  }, 2000 );
-			$(".second").hide("slide", { direction: "down"  }, 2000 );
-			$(".third").hide("slide", { direction: "up"  }, 2000 );
-			$(".fourth").hide("slide", { direction: "right"  }, 2000, function(){
-				$(this).hide("slide",{direction:"top"},2000);
-				setTimeout(window.location.href="/portfolio/",2500);
-			});				
-		}
-	}
-	function showChange(){
-		
-		
-		
-		var width2 = $(window).width();
-		
-		if (width2 >= 414 && width2 < 1000) {
-		//	alert();
-			$("#Title a").animate({ "left": "+=35%" }, "fast" );
-		}else{
-			$("#Title a").animate({ "left": "+=33%" }, "fast" );
-		}
-		$(".clickable").show();
-		$(".clickable-about").show();
-	}
-	
-	/** convert HSV to RGB **/
-	
-	
+
 	/** Generate Flat colors Only using color Theory to generate HSV **/
 	var golden_ratio_conjugate = 0.618033988749895;
 	var HSL = {
