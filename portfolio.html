@@ -3,13 +3,17 @@
 <title>Awesomest Site Ever</title>
 <head>
 <!-- <meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no" /> -->
-<meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=0" /> 
+<meta name="viewport" content="width=device-width, maximum=1, user-scalable=0" /> 
 <meta charset ="UTF-8"/> 
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 <link rel="stylesheet/less" type="text/css" href="assets/style.less" /> 
 <script src="assets/less.js/dist/less.js" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src = "assets/js/d3.v3.js"></script>
+
 <script src="assets/js/page.js"></script>
+
 
 <script   src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"   integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="   crossorigin="anonymous"></script>
 <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -17,64 +21,52 @@
 
 </head>
 <body id ='portfolio'>
-<div id="fb-root"></div>
-
-<div id='Title'><span class='clickable-about .portfolio'> Toggle me to change color! </span>  <a href='/portfolio/' id ='logo'> <img src='../portfolio/assets/img/projects.png' title='Hi'></img> <span> &#60; dacs /&#62; </span></a> </div>
+ 
+<div id='Title'><span class='clickable-about portfolio'> Toggle me to change color! </span>  <a href='/portfolio/' id ='logo'> <img src='../portfolio/assets/img/projects.png' title='Hi'></img><span>&#60;Dacs/&#62; </span></a> </div>
 <div class='container-portfolio'>
 	<div id ='page'>
 		<div id ='about-portfolio'>
-			<div id='portfolio-boxes'>
-				<!-- generate randomly -->
+	
+			<div id='portfolio-boxes' width="500" height="500">
+				
 			</div> 
+			
+			<audio loop="loop" id="the-dj" >
+				
+				<source id='the-dj-source' type="audio/mpeg" />
+				Your browser does not support HTML5 audio.
+			</audio> 
+			
+			<div id='portfolio-boxes-controls' height=200>
+			<span id = 'information'></span>
+			<div id ='controls-container'> <a href='#' class ='controls' id ='volume' title='Mute'><i class= "fa fa-volume-up"></i> </a>
+				<a href='#' class ='controls' id ='randomize' title='Shuffle'><i class= "fa fa-random"></i> </a>
+			</div> 
+				
+			</div>
+			<script src="assets/js/d3fireworks.js"></script>
 			<div id = 'about-portfolio-title'><h2> About the Portfolio<h2></div>
-			<div class ='let-me-tell-you-about-my-portfolio'> 
-			For me, I aim for simplicity and complexity. For an untrained eye, It would rather look simple, bland, if you may. 
-			Yes, I do agree with that. However, What really sets my Portfolio from the other wonderful Portfolios out there is the uniqueness (or I love to think so).
-			Also, In the, as we called it the "heart" of the page It is a complete wack-a-doodle.
 			
-			To generate all these pastel colors randomly, I deviced an Algorithm that will give Pastel Colors and will ignore the bright color that would give you eye strain such as <span style='color:#49fb35'> Neon Green </span>, etc...
-			</div>
 			<div class ='let-me-tell-you-about-my-portfolio'> 
-			The concept behind this Algorithm is widely "experimented" and you can find it with simple Google Search. However, because of my inferior Googling skills, I wasn't able to find a suitable answer for my needs.
-			So, I look for the term <u> Color Theory </u>.
-			According to ever-reliable and not-so reliable source for academics, called the Wikipedia. <u> Color Theory </u> is basically a practical guidance to color mixing and visual effect on the color combination.
-			</div>
-			<div class ='let-me-tell-you-about-my-portfolio'> 
-			Due to my unparallel determination, I was able to find a Programming blog (Sorry I couldn't remember the site's name) about Color Theory. He said about Generating Pastel color with a Mathematical Ratio called Golden Ratio &#934;.
-			It is a number found by dividing a line into two sperate parts so that the longer part divided by those smaller parts is also equal to the original line.
-			
-			</div>
-			<div class ='let-me-tell-you-about-my-portfolio'> 
-			To be honest, I have no freaking idea how to use it. Yes, I am quite familiar with Golden Ratio because, during my high school up until my college years, I spend nights crying before I take Math Exam. An ignorant part of me didn't realize the potential use of this ratio.
-			So, enough of the embarrassing story of my life. This is how I do it:
-
-			</div>
-			<div class ='let-me-tell-you-about-my-portfolio'> 
-			So the concept is fairly simple-looking but really a complex one, First, I have to generate non-neon colors. In order to generate a random number, of course, you have to use a Native function such as <span style='opacity:.8'>Math.random() or rand() </span> 
-			. However, this will not really guarantee to generate Pastel color only. It is just too convoluted. Too much randomness.
-			So, when we generate a number like Even numbers. The values are very close to each other. <a style= 'color:blue;' href= "https://www.khanacademy.org/computing/computer-programming/programming-natural-simulations/programming-randomness/a/normal-distribution-of-random-numbers">[See this for more information...] </a>
-			which is we try to elude because it will give you the same color at very highly probability.
-			This is where the Golden Ratio came and saved me a like a damsel-in-distress. </div>
-			<div class ='let-me-tell-you-about-my-portfolio'>  According to a book called, Data Structures and Algorithms with Object-Oriented Design Patterns in C++, the property of the golden ratio &#934;
-			is that each ensuing value divides the interval into which it falls to the actual golden ratio. 
-			the Distribution of the values are not really close to each other anymore! Thanks to the Golden Ratio!
-		
+				This portfolio is how I express myself in terms of programming, Sophistication and Simplicity.
 			</div>
 			<div class ='let-me-tell-you-about-my-portfolio'>
-			This comes the easy part,the formula is simple. It just random value + the Golden Ratio &#934;. Oh, I almost forgot, It only generates HSL.
-			Which can be easily converted to RGB. The good thing about my the front page grids is that it doesn't generate the same color per instance.
-			The technique is fairly simple and straightforward. Compare the R,G,B values of all the grids then generate another R,G, or B to replace those with equal value.
-
+				The visual effects above is my own version of the original Weeknd3 by Gabriel Ruiz <a href='http://weeknd3.herokuapp.com/' target="__blank">(http://weeknd3.herokuapp.com/)</a> 
 			</div>
 			<div class ='let-me-tell-you-about-my-portfolio'>
-				I know my Portfolio is simple looking, some of you may not like it, others may, I agree I know it's not that much but I'm 100% proud of it. All in all, my Portfolio is just the canvas for my wild imagination! Thank you for sparing your time visiting this nerd-fest portfolio! Have a good day! Passez une bonne journée! 
+				The Pastel Color is inspired by Unicorns. 
 			</div>
+			<div class ='let-me-tell-you-about-my-portfolio'>
+				This website act as my personal sandbox for current web development and designing techniques. Over time the contents may change 
+				you may see broken links or formatting that seems to be out of place. Do not hesitate to  <a href='contactme.html'> holler/contact me </a> at me if you found any broken links or bugs! 
+				In other words, If I'm bored or there is nothing else to do. I will update this. Thank you for visiting! 
 			
-			<div class ='let-me-tell-you-about-my-portfolio'>
-				(Disclaimer: My portfolio is at the development stage. So bear in mind that you might see bugs and errors :) Thank you for your patience :D)
 			</div>
+			<div class ='let-me-tell-you-about-my-portfolio'> Disclaimer: This is not fully mobile-responsive. I'm still working on it :(  Sorry fellas! :(</div>
 		</div> 
 	</div>
 </div>
+
 </body>
+<noscript> Please Enable Javascript</noscript>
 </html>

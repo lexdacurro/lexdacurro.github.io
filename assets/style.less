@@ -1,4 +1,3 @@
-// NOT WORKING
 // Width variables (appears count calculates by raw css)
 @width: 50%; // Appears 4 times
 @width-default: 100%;
@@ -12,9 +11,10 @@
 @clickables: ~".clickable, .clickable-about";
 @portfolio-boxes: ~ ".1st, .2nd, .3rd, .4th";
 @iphone6plusV: ~" only screen  and (min-device-width : 413px)  and (max-device-width : 736px)";
-
+@import 'https://fonts.googleapis.com/css?family=Cedarville+Cursive';
 /*@import 'https://fonts.googleapis.com/css?family=Farsan';*/
 @import 'https://fonts.googleapis.com/css?family=Dosis';
+@font-header: 'Cedarville Cursive', cursive;
 @font-family: 'Dosis', cursive;
 @{Grids}{
 	padding-left:25px;
@@ -59,7 +59,7 @@
 					height:@height !important;
 				}
 			}
-		
+			
 			#page{
 				
 				display: inline-@display;
@@ -87,6 +87,7 @@
 				#about{
 					position:relative;
 					left:130% !important;
+					
 					
 				}
 			}
@@ -146,7 +147,13 @@ body {
 		text-decoration:none;
 		color:inherit;
 	}
+	a:hover{
+		text-decoration:underline;
+	}
 	
+	.controls:hover, .link:hover{
+		text-decoration:none;
+	}
 	#overlay{
 		z-index:1;
 		position:relative;
@@ -164,6 +171,7 @@ body {
 		padding-left:20px;
 		padding-right:20px;
 		display:@display;
+		font-family:@font-header;
 			@{clickables}
 			{
 				font-size:15px;
@@ -181,7 +189,8 @@ body {
 				span{
 					position:relative;
 					bottom:8px;
-					left:10px;
+					left:7px;
+					
 				}
 				
 			}
@@ -191,7 +200,7 @@ body {
 	}
 	
 	.container {
-		
+		font-family:@font-header;
 		.panel1{
 			display:@display;
 			width:@width-default;
@@ -217,7 +226,7 @@ body {
 				width:@width;
 			}
 		}
-	}
+	}/*end container*/
 	.container-about{
 		#page{
 			display:inline-flex;
@@ -240,7 +249,9 @@ body {
 				}
 				#about{
 					position:relative;
-					left:45%;
+					text-align:center;
+					font-weight:bold;
+					font-family:@font-header;
 					h2{
 						font-weight:100;
 					}
@@ -296,9 +307,111 @@ body {
 					}
 				}
 			}
-			
-			
 		}
 		
-	}
-}
+	}/*end container-about*/
+	
+	.container-portfolio{
+		#page{
+			display:inline-flex;
+				#portfolio-boxes{
+					background:	#fcfcfc
+				}
+				#about-portfolio{
+					background:white;
+					margin:30px;
+					padding:30px;
+					color: black !important;
+				}
+				#about-portfolio-title{
+					font-family:@font-header;
+				}
+				
+				.let-me-tell-you-about-my-portfolio{
+					position:relative;
+					padding:10px;
+					text-align:justify;
+				}
+				.about-portfolio-title{
+					position:relative;
+					padding:10px;
+					z-index:-1;
+				}
+				#portfolio-boxes-controls{
+					
+					z-index:999;
+					#information{
+						font-family:@font-header;
+						font-size:15px;
+						z-index:-1;
+					}
+					#controls-container{
+					float:right;
+						a .controls{
+						
+							pointer:cursor;
+						}
+					}
+					
+				}
+		}	
+	} /*end container-portfolio*/
+	
+	.container-projects{
+		#page{
+			display:inline-flex;
+				#about-projects{
+					background:white;
+					margin:30px;
+					padding:30px;
+					color: black !important;
+				}
+				#about-projects-title{
+					font-family:@font-header;
+				}
+				
+				.let-me-tell-you-about-my-projects{
+					position:relative;
+					padding:5px;
+					text-align:justify;
+				}
+				.about-projects-title{
+					position:relative;
+					padding:10px;
+					z-index:-1;
+				}
+				#project-details{
+					font-size:18px;
+				}
+		}	
+	} /* container projects */
+	.container-contact{
+		#page{
+			display:inline-flex;
+				#about-contact{
+					background:white;
+					margin:30px;
+					padding:30px;
+					color: black !important;
+					width:1225px;
+				}
+				#about-contact-title{
+					font-family:@font-header;
+				}
+				
+				.let-me-tell-you-about-my-contact{
+					position:relative;
+					padding:5px;
+					text-align:justify;
+				}
+				.about-contact-title{
+					position:relative;
+					padding:10px;
+					z-index:-1;
+				}
+				#contact-details{
+					font-size:18px;
+				}
+		}	
+	} /* container contact */
+}/*end body*/
