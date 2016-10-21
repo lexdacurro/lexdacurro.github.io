@@ -12,7 +12,7 @@ var w=window.innerWidth,
     refreshInterval=[]; */
 	
 /* my preferred function */
-    var w= window.innerWidth-50,
+    var w= window.innerWidth,
     h=300,
     z = d3.scale.category20b(),
     i = 0,
