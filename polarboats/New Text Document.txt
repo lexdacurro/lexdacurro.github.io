@@ -1,7 +1,0 @@
-<?php
-	function getHeader(){
-		include 'contents/header.php';
-		
-	}
-
-?>
