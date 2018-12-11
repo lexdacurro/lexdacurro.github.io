@@ -42,4 +42,49 @@ $(document).ready(function(){
 		var src = $carouselItem.children().find('img');
 		console.log(src);
 	}
+	var $width = $(this).width();
+	$nav = $(".scrolling-navbar");
+	if ($width <= '992'){
+		$nav.removeClass("navbar-dark");
+		$nav.addClass("navbar-light");
+	}
+		
+});
+
+ function isScrolledIntoView(elem) {
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+  }
+  
+$(window).on('resize',function(){
+	$nav = $(".scrolling-navbar");
+	var $width = $(this).width();
+	if ($width <= '992'){
+		
+		$nav.removeClass("navbar-dark");
+		$nav.addClass("navbar-light");
+	}else{
+		$nav.addClass("navbar-dark");
+		$nav.removeClass("navbar-light");
+		
+	}
+	
+});
+$(document).scroll(function () {
+	  
+	  $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+	  $nav.toggleClass("navbar-dark",$(this).scrollTop() > $nav.height());
+	  $nav.toggleClass("navbar-light",$(this).scrollTop() < $nav.height());
+	 $('.scroll-animations .animated').each(function() {
+      if (isScrolledIntoView(this) === true) {
+        $(this).addClass('slideInLeft');
+      }
+    });
+	
+	
 });

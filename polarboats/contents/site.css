@@ -7,7 +7,9 @@
 		margin:0 !important;
 	}
 }
+a {
 
+}
 html {
     height: 100%;
 }
@@ -16,9 +18,7 @@ body{
 	overflow-x:hidden;
 	font-family: 'Quicksand', sans-serif !important;
 }
-h2{
-	color:#4F6387 !important;
-}
+
 .header-container{
 	background: #fff;
     margin: 0;
@@ -127,7 +127,9 @@ h2{
     color: #656565;
     font-size: 12px;
 }
-
+#header{
+	height: 100% !important;
+}
 #testi{
 	padding-bottom:50px;
 }
@@ -161,4 +163,83 @@ hr.style-ftr:after {
 }
 #futer{
 	background-color: rgba(82,82,82,0.2);
+}
+header {
+  position: relative;
+  background-color: black;
+  height: 75vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+.scrolling-navbar { -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out; -moz-transition: background .5s ease-in-out, padding .5s ease-in-out; transition: background .5s ease-in-out, padding .5s ease-in-out; } .view{ background:url('https://mdbootstrap.com/img/Photos/Others/img (40).jpg') fixed no-repeat center center; background-size: cover; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; }
+@media (pointer: coarse) and (hover: none) {
+  header {
+    background: black no-repeat center center scroll;
+  }
+  header video {
+    display: none;
+  }
+}
+.top-nav-collapse {
+    background-color: #7d8488 !important;
+}
+.navbar:not(.top-nav-collapse) {
+    background: transparent !important;
+}
+@media (max-width: 992px) {
+    .navbar:not(.top-nav-collapse) {
+        background: white !important;
+    }
+}
+.hm-gradient .full-bg-img {
+    background: -moz-linear-gradient(45deg, rgba(242, 34, 50, 0.5), rgba(255, 187, 54, 0.6) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(242, 34, 50, 0.5), rgba(255, 187, 54, 0.6) 100%);
+    background: linear-gradient(to 45deg, rgba(29, 236, 197, 0.4), rgba(96, 0, 136, 0.4) 100%);
+}
+@media (max-width: 740px) {
+    .full-height,
+    .full-height body,
+    .full-height header,
+    .full-height header .view {
+        height: 700px;
+    }
+}
+.navbar.scrolling-navbar {
+    z-index: 100
+}
+.navbar.scrolling-navbar.scrolled {
+  background-color: #fff !important;
+  transition: background-color 200ms linear;
 }
