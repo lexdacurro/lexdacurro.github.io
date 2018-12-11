@@ -34,8 +34,8 @@
 				var loader = new THREE.TextureLoader();
 				var normal = loader.load( 'models/3ds/portalgun/textures/normal.jpg' );
 				var loader = new THREE.TDSLoader( );
-				loader.setResourcePath( 'content/3d/' );
-				loader.load( 'content/sampleboat.3ds', function ( object ) {
+				loader.setResourcePath( 'contents/3d/' );
+				loader.load( 'contents/sampleboat.3ds', function ( object ) {
 					object.traverse( function ( child ) {
 						if ( child instanceof THREE.Mesh ) {
 							child.material.normalMap = normal;
