@@ -46,7 +46,7 @@
 				var normal = loader.load( 'contents/3d/normal.jpg' );
 				var loader = new THREE.TDSLoader( );
 				loader.setResourcePath( 'contents/3d/' );
-				loader.load( 'contents/3d/sampleboat.3ds', function ( object ) {
+				loader.load( 'contents/3d/portalgun.3ds', function ( object ) {
 					object.traverse( function ( child ) {
 						if ( child instanceof THREE.Mesh ) {
 							child.material.normalMap = normal;
