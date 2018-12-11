@@ -20,7 +20,11 @@
 			init();
 			animate();
 			function init() {
-				container = document.getElementById( 'k' );
+				
+				var objTo = document.getElementById('k');
+ 
+				container = document.createElement( 'div' );
+				objTo.appendChild( container );
 				
 				camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 0.1, 10 );
 				camera.position.z = 2;
