@@ -45,7 +45,7 @@
 				var loader = new THREE.TextureLoader();
 				var normal = loader.load( 'contents/3d/texture/normal.jpg' );
 				var loader = new THREE.TDSLoader( );
-				loader.setResourcePath( 'contents/3d/texture' );
+				loader.setResourcePath( 'contents/3d/texture/' );
 				loader.load( 'contents/3d/portalgun.3ds', function ( object ) {
 					object.traverse( function ( child ) {
 						if ( child instanceof THREE.Mesh ) {
