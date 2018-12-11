@@ -43,7 +43,7 @@
 				scene.add( directionalLight );
 				//3ds files dont store normal maps
 				var loader = new THREE.TextureLoader();
-				var normal = loader.load( 'models/3ds/portalgun/textures/normal.jpg' );
+				var normal = loader.load( 'contents/3d/normal.jpg' );
 				var loader = new THREE.TDSLoader( );
 				loader.setResourcePath( 'contents/3d/' );
 				loader.load( 'contents/3d/sampleboat.3ds', function ( object ) {
