@@ -1,4 +1,4 @@
-<html class="no-js" lang="en">
+<!DOCTYPE html class="no-js" lang="en">
 <head>
 	<title>Roof and Rack Prototype</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,9 +41,24 @@ $(document).ready(function(){
 	},function(){
 		$(this).children().removeClass("animated bounce");
 	});
-
-	
-});
+	$('#35Years').each(function () {
+		$(this).prop('#35Years',0).animate({
+			Counter: 35
+		}, {
+			duration: 4000,
+			easing: 'swing',
+			step: function (now) {
+				$(this).text(Math.ceil(now));
+				if (now == 35){
+					$(this).addClass("p");
+					$(this).css({'text-decoration' : 'underline #1E87F0'
+								});
+					return false;
+				}
+			}
+		});
+	});
+	});
 </script>
 </head>
 
@@ -55,8 +70,11 @@ $(document).ready(function(){
 				<img data-src="images/left-boat.png" class="animated slideInLeft uk-height-1-1" alt="" uk-img>
 				 <a class="uk-position-absolute uk-transform-center fade-in-bck" style="left: 16%; top: 70%" href="#" uk-marker  uk-tooltip="title: This is our Product; delay: 300"></a>
 				<span class="ey">
-				
-					
+					<span class="uk-h4 uk-position-small uk-position-top-left" style="padding-right:50px;">
+							<img data-src="images/logo2.png" width="425" class="" alt="" uk-img>
+							
+					</span>
+						
 					<span class="uk-h4 uk-position-small uk-position-top-right" id="nav-menu" style="z-index:99999 !important;">
 						<a href="#side-menu"  uk-toggle id="toggle_menu" style="font-weight:700;" >
 							<img src="images/hamburger.png" uk-img>
@@ -74,10 +92,7 @@ $(document).ready(function(){
 			
 			</div>
 			<div id="navbar-k">
-				<span class="uk-h4 uk-position-small uk-position-top-left" style="padding-right:50px;">
-						<img data-src="images/logo2.png" width="425" class="" alt="" uk-img>
-						
-				</span>
+				
 				<nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
 					<div class="uk-navbar-right">
 					<ul class="uk-navbar-nav">
@@ -118,140 +133,204 @@ $(document).ready(function(){
 				<span class="uk-margin-small-right uk-icon animated bounce infinite" uk-icon="chevron-down" >
 					<svg width="50" height="100" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="chevron-down"> 
 						<polyline fill="none" stroke="#000" stroke-width="1.03" points="16 7 10 13 4 7"></polyline>
+						<polyline fill="none" stroke="#000" stroke-width="1.03" points="16 7 10 18 4 7"></polyline>
 					</svg>
+					
 				</span>
 			</a>
 		</section>
-		<div class="uk-width-expand@l">
-			About Us
-		</div>
-		<div id="section9" class="tm uk-height-1-1 uk-section-default uk-section uk-section-xlarge uk-padding-remove-top" uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-slide-top-medium; delay: 200;"> 
-			<div class="uk-grid-collapse uk-child-width-expand@s" uk-grid id="2ndThis" >
-				<div class="uk-margin uk-text-center" id="typingBanner" style="padding-top:50px; padding-bottom:25px;">
-					<h4 class="c2" uk-scrollspy="cls:typingEffect"> > BUILDING THE WORLD'S  <span class="heartbeat" style="color:#74C3E4;">FINEST MARINE STORAGE SOLUTIONS SINCE 1978 </span> < </h4>
-				</div>
-			</div>
-			
-			<div class="uk-flex-bottom uk-grid" uk-grid="">
-			   <div class="uk-width-2-3@m uk-first-column">
-				  <h2 class="uk-margin-remove-vertical b2 uk-width-xlarge uk-h1 uk-scrollspy-inview uk-animation-slide-bottom-medium" uk-scrollspy-class="" style=""> Our Projects</h2>
-			   </div>
-			   <div class="uk-width-expand@m">
-				  <div class="uk-margin uk-text-right@m uk-scrollspy-inview uk-animation-slide-bottom-medium" uk-scrollspy-class="" style="">
-					 <a class="el-content c1 uk-button uk-button-primary uk-button-large">
-						Discover More
-					 </a>
-				  </div>
-			   </div>
-			</div>
-
-			
-			<div class="uk-grid-margin uk-grid uk-grid-stack" uk-grid="" uk-scrollspy-class>
-					   <div class="uk-width-1-1@m uk-first-column">
-						  <div class="uk-margin uk-text-left uk-slider uk-slider-container uk-scrollspy-inview uk-animation-slide-bottom-medium" uk-slider="" uk-scrollspy-class="" style="">
-							 <div class="uk-position-relative uk-visible-toggle">
-								<ul class="uk-slider-items uk-grid" style="transform: translateX(0px);">
-								   <li class="el-item uk-width-4-5 uk-width-1-2@s uk-width-1-3@m uk-width-1-4@l uk-active">
-									  <div class="uk-cover-container uk-transition-toggle uk-light" tabindex="0">
-										 <img class="el-image uk-transition-scale-up uk-transition-opaque" alt="" uk-img="target: !.uk-slider-items" data-src="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-01-9e75d119.webp" data-srcset="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-01-9e75d119.webp 600w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-01-2c3c24b2.webp 768w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-01-d4497366.webp 1024w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-01-cd1b61ab.webp 1200w" data-sizes="(min-width: 600px) 600px" data-width="1200" data-height="1720" sizes="(min-width: 600px) 600px" srcset="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-01-9e75d119.webp 600w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-01-2c3c24b2.webp 768w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-01-d4497366.webp 1024w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-01-cd1b61ab.webp 1200w" src="https://demo.yootheme.comhttps://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-01-9e75d119.webp">        
-										 <div class="uk-panel uk-padding uk-position-bottom-left uk-width-large">
-											<h3 class="el-title uk-margin uk-h4">   Sample <br> Image   </h3>
-											<div class="el-content uk-margin">Learn More</div>
-										 </div>
-										 <a class="uk-position-cover" ></a>    
-									  </div>
-								   </li>
-								   <li class="el-item uk-width-4-5 uk-width-1-2@s uk-width-1-3@m uk-width-1-4@l uk-active">
-									  <div class="uk-cover-container uk-transition-toggle uk-light" tabindex="0">
-										 <img class="el-image uk-transition-scale-up uk-transition-opaque" alt="" uk-img="target: !.uk-slider-items" data-src="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-02-663a0932.webp" data-srcset="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-02-663a0932.webp 600w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-02-b7a69e5d.webp 768w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-02-7807d808.webp 1024w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-02-6155cac5.webp 1200w" data-sizes="(min-width: 600px) 600px" data-width="1200" data-height="1720" sizes="(min-width: 600px) 600px" srcset="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-02-663a0932.webp 600w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-02-b7a69e5d.webp 768w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-02-7807d808.webp 1024w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-02-6155cac5.webp 1200w" src="https://demo.yootheme.comhttps://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-02-663a0932.webp">        
-										 <div class="uk-panel uk-padding uk-position-bottom-left uk-width-large">
-											<h3 class="el-title uk-margin uk-h4">        Sample<br> Image    </h3>
-											<div class="el-content uk-margin">Learn More</div>
-										 </div>
-										 <a class="uk-position-cover"></a>    
-									  </div>
-								   </li>
-								   <li class="el-item uk-width-4-5 uk-width-1-2@s uk-width-1-3@m uk-width-1-4@l uk-active">
-									  <div class="uk-cover-container uk-transition-toggle uk-light" tabindex="0">
-										 <img class="el-image uk-transition-scale-up uk-transition-opaque" alt="" uk-img="target: !.uk-slider-items" data-src="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-03-31ff412b.webp" data-srcset="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-03-31ff412b.webp 600w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-03-77fff5c7.webp 768w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-03-1c3dbed2.webp 1024w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-03-056fac1f.webp 1200w" data-sizes="(min-width: 600px) 600px" data-width="1200" data-height="1720" sizes="(min-width: 600px) 600px" srcset="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-03-31ff412b.webp 600w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-03-77fff5c7.webp 768w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-03-1c3dbed2.webp 1024w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-03-056fac1f.webp 1200w" src="https://demo.yootheme.comhttps://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-03-31ff412b.webp">        
-										 <div class="uk-panel uk-padding uk-position-bottom-left uk-width-large">
-											<h3 class="el-title uk-margin uk-h4">        Sample<br> Image    </h3>
-											<div class="el-content uk-margin">Learn More</div>
-										 </div>
-										 <a class="uk-position-cover"></a>    
-									  </div>
-								   </li>
-								   <li class="el-item uk-width-4-5 uk-width-1-2@s uk-width-1-3@m uk-width-1-4@l">
-									  <div class="uk-cover-container uk-transition-toggle uk-light" tabindex="0">
-										 <img class="el-image uk-transition-scale-up uk-transition-opaque" alt="" uk-img="target: !.uk-slider-items" data-src="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-04-4dd4bf25.webp" data-srcset="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-04-4dd4bf25.webp 600w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-04-5be2edc2.webp 768w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-04-fbeb8895.webp 1024w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-04-e2b99a58.webp 1200w" data-sizes="(min-width: 600px) 600px" data-width="1200" data-height="1720" sizes="(min-width: 600px) 600px" srcset="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-04-4dd4bf25.webp 600w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-04-5be2edc2.webp 768w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-04-fbeb8895.webp 1024w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-04-e2b99a58.webp 1200w" src="https://demo.yootheme.comhttps://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-04-4dd4bf25.webp">        
-										 <div class="uk-panel uk-padding uk-position-bottom-left uk-width-large">
-											<h3 class="el-title uk-margin uk-h4">        Sample<br> Image   </h3>
-											<div class="el-content uk-margin">Learn More</div>
-										 </div>
-										 <a class="uk-position-cover"></a>    
-									  </div>
-								   </li>
-								   <li class="el-item uk-width-4-5 uk-width-1-2@s uk-width-1-3@m uk-width-1-4@l">
-									  <div class="uk-cover-container uk-transition-toggle uk-light" tabindex="0">
-										 <img class="el-image uk-transition-scale-up uk-transition-opaque" alt="" uk-img="target: !.uk-slider-items" data-src="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-05-1a11f73c.webp" data-srcset="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-05-1a11f73c.webp 600w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-05-9bbb8658.webp 768w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-05-9fd1ee4f.webp 1024w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-05-8683fc82.webp 1200w" data-sizes="(min-width: 600px) 600px" data-width="1200" data-height="1720" sizes="(min-width: 600px) 600px" srcset="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-05-1a11f73c.webp 600w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-05-9bbb8658.webp 768w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-05-9fd1ee4f.webp 1024w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-05-8683fc82.webp 1200w" src="https://demo.yootheme.comhttps://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-05-1a11f73c.webp">        
-										 <div class="uk-panel uk-padding uk-position-bottom-left uk-width-large">
-											<h3 class="el-title uk-margin uk-h4">        Sample <br>Image   </h3>
-											<div class="el-content uk-margin">Learn More</div>
-										 </div>
-										 <a class="uk-position-cover"></a>    
-									  </div>
-								   </li>
-								   <li class="el-item uk-width-4-5 uk-width-1-2@s uk-width-1-3@m uk-width-1-4@l">
-									  <div class="uk-cover-container uk-transition-toggle uk-light" tabindex="0">
-										 <img class="el-image uk-transition-scale-up uk-transition-opaque" alt="" uk-img="target: !.uk-slider-items" data-src="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-06-e25e2f17.webp" data-srcset="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-06-e25e2f17.webp 600w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-06-00213cb7.webp 768w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-06-339f4521.webp 1024w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-06-2acd57ec.webp 1200w" data-sizes="(min-width: 600px) 600px" data-width="1200" data-height="1720" sizes="(min-width: 600px) 600px" srcset="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-06-e25e2f17.webp 600w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-06-00213cb7.webp 768w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-06-339f4521.webp 1024w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-06-2acd57ec.webp 1200w" src="https://demo.yootheme.comhttps://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-06-e25e2f17.webp">        
-										 <div class="uk-panel uk-padding uk-position-bottom-left uk-width-large">
-											<h3 class="el-title uk-margin uk-h4">        Sample<br> Image   </h3>
-											<div class="el-content uk-margin">Learn More</div>
-										 </div>
-										 <a class="uk-position-cover"></a>    
-									  </div>
-								   </li>
-								   <li class="el-item uk-width-4-5 uk-width-1-2@s uk-width-1-3@m uk-width-1-4@l">
-									  <div class="uk-cover-container uk-transition-toggle uk-light" tabindex="0">
-										 <img class="el-image uk-transition-scale-up uk-transition-opaque" alt="" uk-img="target: !.uk-slider-items" data-src="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-07-b59b670e.webp" data-srcset="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-07-b59b670e.webp 600w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-07-c078572d.webp 768w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-07-57a523fb.webp 1024w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-07-4ef73136.webp 1200w" data-sizes="(min-width: 600px) 600px" data-width="1200" data-height="1720" sizes="(min-width: 600px) 600px" srcset="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-07-b59b670e.webp 600w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-07-c078572d.webp 768w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-07-57a523fb.webp 1024w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-07-4ef73136.webp 1200w" src="https://demo.yootheme.comhttps://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-07-b59b670e.webp">        
-										 <div class="uk-panel uk-padding uk-position-bottom-left uk-width-large">
-											<h3 class="el-title uk-margin uk-h4">        Sample<br> Image    </h3>
-											<div class="el-content uk-margin">Learn More</div>
-										 </div>
-										 <a class="uk-position-cover"></a>    
-									  </div>
-								   </li>
-								   <li class="el-item uk-width-4-5 uk-width-1-2@s uk-width-1-3@m uk-width-1-4@l uk-active" style="order: -1;">
-									  <div class="uk-cover-container uk-transition-toggle uk-light" tabindex="0">
-										 <img class="el-image uk-transition-scale-up uk-transition-opaque" alt="" uk-img="target: !.uk-slider-items" data-src="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-08-1a09d30b.webp" data-srcset="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-08-1a09d30b.webp 600w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-08-581b0cbd.webp 768w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-08-27422fee.webp 1024w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-08-3e103d23.webp 1200w" data-sizes="(min-width: 600px) 600px" data-width="1200" data-height="1720" sizes="(min-width: 600px) 600px" srcset="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-08-1a09d30b.webp 600w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-08-581b0cbd.webp 768w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-08-27422fee.webp 1024w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-08-3e103d23.webp 1200w" src="https://demo.yootheme.comhttps://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-08-1a09d30b.webp">        
-										 <div class="uk-panel uk-padding uk-position-bottom-left uk-width-large">
-											<h3 class="el-title uk-margin uk-h4">        Sample <br> Image   </h3>
-											<div class="el-content uk-margin">Learn More</div>
-										 </div>
-										 <a class="uk-position-cover"></a>    
-									  </div>
-								   </li>
-								</ul>
-								<div class="uk-hidden-hover uk-hidden-touch uk-visible@s">
-								   <a class="el-slidenav uk-slidenav-large uk-position-medium uk-position-center-left uk-slidenav-previous uk-icon uk-slidenav" href="#" uk-slidenav-previous="" uk-slider-item="previous">
-									  <svg width="19" height="16" viewBox="0 0 19 16" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-previous-large">
-										 <path fill="none" stroke="#FFFFFF" stroke-width="2" d="M8.8 1.5L1.8 8l7 6.5"></path>
-										 <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7h16v2H3z"></path>
-									  </svg>
-								   </a>
-								   <a class="el-slidenav uk-slidenav-large uk-position-medium uk-position-center-right uk-slidenav-next uk-icon uk-slidenav" href="#" uk-slidenav-next="" uk-slider-item="next">
-									  <svg width="19" height="16" viewBox="0 0 19 16" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-next-large">
-										 <path fill="none" stroke="#FFFFFF" stroke-width="2" d="M10.2 1.5l7 6.5-7 6.5"></path>
-										 <path fill-rule="evenodd" clip-rule="evenodd" d="M0 7h16v2H0z"></path>
-									  </svg>
-								   </a>
+		<div id="section8" class=" uk-section-default uk-padding-remove-top" uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-slide-top-medium; delay: 200;"> 
+		
+			<div data-src="images/background.svg" 
+				uk-img="" class="uk-background-norepeat uk-background-top-right uk-background-image@s 
+				uk-section uk-section-xlarge" uk-parallax="bgx: -80,-80;bgy: 80,400" 
+					style="background-image: url(&quot;images/background.svg&quot;); 
+					background-position: calc(100% + 80px) calc(125.29px);">    
+					
+					<div class="uk-container uk-container-large" >
+						<div class="uk-grid-xlarge uk-grid-margin-large uk-grid">
+							<div class="uk-width-xlarge@l uk-first-column">
+								<div class="uk-width-xlarge@m ">
+									<h4 class="c2 uk-margin-remove-vertical uk-h1 uk-scrollspy-inview uk-animation-slide-right-medium" uk-scrollspy-class="" style="">
+										<a href="#">
+											<span class="uk-text-warning" id="35Years" style="font-size:50px;display:inline-block;">35</span>
+										</a> 
+										Years of Excellence<span class="uk-text-primary">.</span>    
+									</h4>
+									<div class="uk-margin-large uk-width-xlarge uk-scrollspy-inview uk-animation-slide-left-medium" 
+									uk-scrollspy-class="" style="">
+										The World's leading authority in the Marine Dry Storage Industry. The Most trusted brand for over 35 years! Our logo symbolizes quality.
+										Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+										<span><a href="#"> Learn More </a></span>
+									</div>
+								
 								</div>
-							 </div>
-						  </div>
-					   </div>
+							</div>
+							<div class="uk-width-expand@l">
+								<div id="hehe" class="uk-margin">
+									<div class="uk-child-width-1-2 uk-grid-match uk-grid" uk-grid>	
+										<div class="uk-first-column">
+											<div class="about-item uk-panel uk-scrollspy-inview " uk-scrollspy-class="uk-animation-slide-left-medium" style="">
+												<img class="about-image-i " src="images/kayak.jpg" uk-img />
+											</div>
+										</div>
+										<div>
+											<div class="about-item uk-panel uk-scrollspy-inview" uk-scrollspy-class="uk-animation-slide-left-medium" style="">
+												<img class="about-image-offlane" src="images/about_staff.jpg" />
+											</div>
+										</div>
+										<div>
+											<div class="about-item uk-panel uk-scrollspy-inview" uk-scrollspy-class="uk-animation-slide-left-medium" style="">
+												<img class="about-image" src="images/about_staff.jpg" />
+											</div>
+										</div>
+										<div>
+											<div class="about-item uk-panel uk-scrollspy-inview" uk-scrollspy-class="uk-animation-slide-left-medium" style="">
+												<img class="about-image-offlane" src="images/kayak.jpg" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					
 					</div>
+				
+					
+			</div>
+					
 		</div>
 	
+		<div id="section9" class="uk-height-1-1 uk-section-default uk-section uk-section-xlarge uk-padding-remove-top" uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-slide-top-medium; delay: 200;"> 
+			<div class="uk-container uk-container-large">
+				<div class="uk-grid-collapse uk-child-width-expand@s" uk-grid id="2ndThis" >
+					<div class="uk-margin uk-text-center" id="typingBanner" style="padding-top:50px; padding-bottom:25px;">
+						<h4 class="c2" uk-scrollspy="cls:typingEffect"> > BUILDING THE WORLD'S  <span class="heartbeat" style="color:#74C3E4;">FINEST MARINE STORAGE SOLUTIONS SINCE 1978 </span> < </h4>
+					</div>
+				</div>
+				
+				<div class="uk-flex-bottom uk-grid" uk-grid="">
+				   <div class="uk-width-2-3@m uk-first-column">
+					  <h2 class="uk-margin-remove-vertical b2 uk-width-xlarge uk-h1 uk-scrollspy-inview uk-animation-slide-bottom-medium" uk-scrollspy-class="" style=""> Projects </h2>
+				   </div>
+				   <div class="uk-width-expand@m">
+					  <div class="uk-margin uk-text-right@m uk-scrollspy-inview uk-animation-slide-bottom-medium" uk-scrollspy-class="" style="">
+						 <a class="el-content c1 uk-button uk-button-primary uk-button-large">
+							Discover More
+						 </a>
+					  </div>
+				   </div>
+				</div>
+
+				
+				<div class="uk-grid-margin uk-grid uk-grid-stack" uk-grid="masonry:true;" uk-scrollspy-class>
+						   <div class="uk-width-1-1@m uk-first-column">
+							  <div class="uk-margin uk-text-left uk-slider uk-slider-container uk-scrollspy-inview uk-animation-slide-bottom-medium" uk-slider="" uk-scrollspy-class="" style="">
+								 <div class="uk-position-relative uk-visible-toggle">
+									<ul class="uk-slider-items uk-grid" style="transform: translateX(0px);">
+									   <li class="el-item uk-width-4-5 uk-width-1-2@s uk-width-1-3@m uk-width-1-4@l uk-active">
+										  <div class="uk-cover-container uk-transition-toggle uk-light" tabindex="0">
+											 <img class="el-image uk-transition-scale-up uk-transition-opaque" alt="" uk-img="target: !.uk-slider-items" data-src="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-01-9e75d119.webp" data-srcset="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-01-9e75d119.webp 600w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-01-2c3c24b2.webp 768w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-01-d4497366.webp 1024w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-01-cd1b61ab.webp 1200w" data-sizes="(min-width: 600px) 600px" data-width="1200" data-height="1720" sizes="(min-width: 600px) 600px" srcset="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-01-9e75d119.webp 600w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-01-2c3c24b2.webp 768w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-01-d4497366.webp 1024w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-01-cd1b61ab.webp 1200w" src="https://demo.yootheme.comhttps://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-01-9e75d119.webp">        
+											 <div class="uk-panel uk-padding uk-position-bottom-left uk-width-large project-cont">
+												<h3 class="el-title uk-margin uk-h4">   Sample <br> Image   </h3>
+												<div class="el-content uk-margin">Learn More</div>
+											 </div>
+											 <a class="uk-position-cover" ></a>    
+										  </div>
+									   </li>
+									   <li class="el-item uk-width-4-5 uk-width-1-2@s uk-width-1-3@m uk-width-1-4@l uk-active">
+										  <div class="uk-cover-container uk-transition-toggle uk-light" tabindex="0">
+											 <img class="el-image uk-transition-scale-up uk-transition-opaque" alt="" uk-img="target: !.uk-slider-items" data-src="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-02-663a0932.webp" data-srcset="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-02-663a0932.webp 600w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-02-b7a69e5d.webp 768w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-02-7807d808.webp 1024w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-02-6155cac5.webp 1200w" data-sizes="(min-width: 600px) 600px" data-width="1200" data-height="1720" sizes="(min-width: 600px) 600px" srcset="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-02-663a0932.webp 600w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-02-b7a69e5d.webp 768w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-02-7807d808.webp 1024w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-02-6155cac5.webp 1200w" src="https://demo.yootheme.comhttps://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-02-663a0932.webp">        
+											 <div class="uk-panel uk-padding uk-position-bottom-left uk-width-large project-cont">
+												<h3 class="el-title uk-margin uk-h4">        Sample<br> Image    </h3>
+												<div class="el-content uk-margin">Learn More</div>
+											 </div>
+											 <a class="uk-position-cover"></a>    
+										  </div>
+									   </li>
+									   <li class="el-item uk-width-4-5 uk-width-1-2@s uk-width-1-3@m uk-width-1-4@l uk-active">
+										  <div class="uk-cover-container uk-transition-toggle uk-light" tabindex="0">
+											 <img class="el-image uk-transition-scale-up uk-transition-opaque" alt="" uk-img="target: !.uk-slider-items" data-src="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-03-31ff412b.webp" data-srcset="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-03-31ff412b.webp 600w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-03-77fff5c7.webp 768w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-03-1c3dbed2.webp 1024w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-03-056fac1f.webp 1200w" data-sizes="(min-width: 600px) 600px" data-width="1200" data-height="1720" sizes="(min-width: 600px) 600px" srcset="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-03-31ff412b.webp 600w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-03-77fff5c7.webp 768w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-03-1c3dbed2.webp 1024w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-03-056fac1f.webp 1200w" src="https://demo.yootheme.comhttps://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-03-31ff412b.webp">        
+											 <div class="uk-panel uk-padding uk-position-bottom-left uk-width-large project-cont">
+												<h3 class="el-title uk-margin uk-h4">        Sample<br> Image    </h3>
+												<div class="el-content uk-margin">Learn More</div>
+											 </div>
+											 <a class="uk-position-cover"></a>    
+										  </div>
+									   </li>
+									   <li class="el-item uk-width-4-5 uk-width-1-2@s uk-width-1-3@m uk-width-1-4@l">
+										  <div class="uk-cover-container uk-transition-toggle uk-light" tabindex="0">
+											 <img class="el-image uk-transition-scale-up uk-transition-opaque" alt="" uk-img="target: !.uk-slider-items" data-src="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-04-4dd4bf25.webp" data-srcset="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-04-4dd4bf25.webp 600w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-04-5be2edc2.webp 768w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-04-fbeb8895.webp 1024w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-04-e2b99a58.webp 1200w" data-sizes="(min-width: 600px) 600px" data-width="1200" data-height="1720" sizes="(min-width: 600px) 600px" srcset="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-04-4dd4bf25.webp 600w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-04-5be2edc2.webp 768w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-04-fbeb8895.webp 1024w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-04-e2b99a58.webp 1200w" src="https://demo.yootheme.comhttps://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-04-4dd4bf25.webp">        
+											 <div class="uk-panel uk-padding uk-position-bottom-left uk-width-large project-cont">
+												<h3 class="el-title uk-margin uk-h4">        Sample<br> Image   </h3>
+												<div class="el-content uk-margin">Learn More</div>
+											 </div>
+											 <a class="uk-position-cover"></a>    
+										  </div>
+									   </li>
+									   <li class="el-item uk-width-4-5 uk-width-1-2@s uk-width-1-3@m uk-width-1-4@l">
+										  <div class="uk-cover-container uk-transition-toggle uk-light" tabindex="0">
+											 <img class="el-image uk-transition-scale-up uk-transition-opaque" alt="" uk-img="target: !.uk-slider-items" data-src="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-05-1a11f73c.webp" data-srcset="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-05-1a11f73c.webp 600w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-05-9bbb8658.webp 768w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-05-9fd1ee4f.webp 1024w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-05-8683fc82.webp 1200w" data-sizes="(min-width: 600px) 600px" data-width="1200" data-height="1720" sizes="(min-width: 600px) 600px" srcset="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-05-1a11f73c.webp 600w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-05-9bbb8658.webp 768w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-05-9fd1ee4f.webp 1024w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-05-8683fc82.webp 1200w" src="https://demo.yootheme.comhttps://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-05-1a11f73c.webp">        
+											 <div class="uk-panel uk-padding uk-position-bottom-left uk-width-large project-cont">
+												<h3 class="el-title uk-margin uk-h4">        Sample <br>Image   </h3>
+												<div class="el-content uk-margin">Learn More</div>
+											 </div>
+											 <a class="uk-position-cover"></a>    
+										  </div>
+									   </li>
+									   <li class="el-item uk-width-4-5 uk-width-1-2@s uk-width-1-3@m uk-width-1-4@l">
+										  <div class="uk-cover-container uk-transition-toggle uk-light" tabindex="0">
+											 <img class="el-image uk-transition-scale-up uk-transition-opaque" alt="" uk-img="target: !.uk-slider-items" data-src="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-06-e25e2f17.webp" data-srcset="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-06-e25e2f17.webp 600w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-06-00213cb7.webp 768w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-06-339f4521.webp 1024w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-06-2acd57ec.webp 1200w" data-sizes="(min-width: 600px) 600px" data-width="1200" data-height="1720" sizes="(min-width: 600px) 600px" srcset="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-06-e25e2f17.webp 600w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-06-00213cb7.webp 768w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-06-339f4521.webp 1024w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-06-2acd57ec.webp 1200w" src="https://demo.yootheme.comhttps://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-06-e25e2f17.webp">        
+											 <div class="uk-panel uk-padding uk-position-bottom-left uk-width-large project-cont">
+												<h3 class="el-title uk-margin uk-h4">        Sample<br> Image   </h3>
+												<div class="el-content uk-margin">Learn More</div>
+											 </div>
+											 <a class="uk-position-cover"></a>    
+										  </div>
+									   </li>
+									   <li class="el-item uk-width-4-5 uk-width-1-2@s uk-width-1-3@m uk-width-1-4@l">
+										  <div class="uk-cover-container uk-transition-toggle uk-light" tabindex="0">
+											 <img class="el-image uk-transition-scale-up uk-transition-opaque" alt="" uk-img="target: !.uk-slider-items" data-src="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-07-b59b670e.webp" data-srcset="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-07-b59b670e.webp 600w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-07-c078572d.webp 768w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-07-57a523fb.webp 1024w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-07-4ef73136.webp 1200w" data-sizes="(min-width: 600px) 600px" data-width="1200" data-height="1720" sizes="(min-width: 600px) 600px" srcset="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-07-b59b670e.webp 600w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-07-c078572d.webp 768w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-07-57a523fb.webp 1024w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-07-4ef73136.webp 1200w" src="https://demo.yootheme.comhttps://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-07-b59b670e.webp">        
+											 <div class="uk-panel uk-padding uk-position-bottom-left uk-width-large project-cont">
+												<h3 class="el-title uk-margin uk-h4">        Sample<br> Image    </h3>
+												<div class="el-content uk-margin">Learn More</div>
+											 </div>
+											 <a class="uk-position-cover"></a>    
+										  </div>
+									   </li>
+									   <li class="el-item uk-width-4-5 uk-width-1-2@s uk-width-1-3@m uk-width-1-4@l uk-active" style="order: -1;">
+										  <div class="uk-cover-container uk-transition-toggle uk-light" tabindex="0">
+											 <img class="el-image uk-transition-scale-up uk-transition-opaque" alt="" uk-img="target: !.uk-slider-items" data-src="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-08-1a09d30b.webp" data-srcset="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-08-1a09d30b.webp 600w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-08-581b0cbd.webp 768w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-08-27422fee.webp 1024w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-08-3e103d23.webp 1200w" data-sizes="(min-width: 600px) 600px" data-width="1200" data-height="1720" sizes="(min-width: 600px) 600px" srcset="https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-08-1a09d30b.webp 600w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-08-581b0cbd.webp 768w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-08-27422fee.webp 1024w, https://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-08-3e103d23.webp 1200w" src="https://demo.yootheme.comhttps://demo.yootheme.com/themes/wordpress/2018/yard/wp-content/themes/yootheme/cache/home-projects-slider-08-1a09d30b.webp">        
+											 <div class="uk-panel uk-padding uk-position-bottom-left uk-width-large project-cont">
+												<h3 class="el-title uk-margin uk-h4">        Sample <br> Image   </h3>
+												<div class="el-content uk-margin">Learn More</div>
+											 </div>
+											 <a class="uk-position-cover"></a>    
+										  </div>
+									   </li>
+									</ul>
+									<div class="uk-hidden-hover uk-hidden-touch uk-visible@s">
+									   <a class="el-slidenav uk-slidenav-large uk-position-medium uk-position-center-left uk-slidenav-previous uk-icon uk-slidenav" href="#" uk-slidenav-previous="" uk-slider-item="previous">
+										  <svg width="19" height="16" viewBox="0 0 19 16" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-previous-large">
+											 <path fill="none" stroke="#FFFFFF" stroke-width="2" d="M8.8 1.5L1.8 8l7 6.5"></path>
+											 <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7h16v2H3z"></path>
+										  </svg>
+									   </a>
+									   <a class="el-slidenav uk-slidenav-large uk-position-medium uk-position-center-right uk-slidenav-next uk-icon uk-slidenav" href="#" uk-slidenav-next="" uk-slider-item="next">
+										  <svg width="19" height="16" viewBox="0 0 19 16" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-next-large">
+											 <path fill="none" stroke="#FFFFFF" stroke-width="2" d="M10.2 1.5l7 6.5-7 6.5"></path>
+											 <path fill-rule="evenodd" clip-rule="evenodd" d="M0 7h16v2H0z"></path>
+										  </svg>
+									   </a>
+									</div>
+								 </div>
+							  </div>
+						   </div>
+						</div>
+				</div>
+			</div>
+		
 
 </body>
 </html>

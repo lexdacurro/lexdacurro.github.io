@@ -43,7 +43,6 @@
 	}
 	#bannercontainer span{
 		padding-right:150px;
-		padding-bottom:150px;
 	}
 	#navbar-k ul li > a{
 		font-family: 'Oswald', sans-serif;
@@ -52,6 +51,8 @@
 	#nav-menu{
 		display:none;
 	}
+	
+	
 	.uk-position-medium[class*="uk-position-center-left"], .uk-position-medium[class*="uk-position-center-right"] {
 		transform: translateY(-50%) translateY(-30px);
 	}
@@ -133,6 +134,13 @@
 		padding:0;
 		width:358px;
 		line-height:120px;
+	}
+	.project-cont{
+		background:rgb(0,0,0,.6)
+		
+	}
+	.about-image-offlane{
+		padding-top:50px;
 	}
 	
 	.typingEffect {
